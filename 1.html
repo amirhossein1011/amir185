@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>   AMIR HOSSEIN  </title>   
+<meta charset="UTF-8">
+</head>
+<style>
+h2{
+           color:red;
+           font-size:200;
+}
+p{
+          color:black;
+          font-size:50px;
+}
+button {
+            background-color: white;
+            color: white;
+            padding: 20px 20px;
+            font-size: 16px;
+            border: 3px solid black;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+button:hover {
+            background-color: gray;
+             }
+img {
+        width: 50px; /* اندازه تصویر رو تنظیم کنید */
+                height: auto;
+    }
+.gauge-container {
+            width: 200px;
+            margin: 20px auto;
+        }
+        .needle {
+            transform-origin: 50% 100%; /* نقطه چرخش عقربه */
+            transition: transform 0.5s ease-out; /* انیمیشن نرم */
+        }
+.gauge-wrapper {
+    display: flex;
+    justify-content: center; /* وسط‌چین کردن گیج‌ها */
+    gap: 50px; /* فاصله بین دو گیج */
+}
+</style>
+<body>
+<center>
+<h2> کنترل هوشمند خانه </h2>
+<object data="file:///C:/Users/ASUS/Pictures/Saved%20Pictures/WhatsApp%20Image%202025-02-25%20at%2010.41.30.png"></object>
+<hr>
+<button type="button" onclick="alert(' لامپ روشن شد')"> 
+<img src="file:///C:/Users/ASUS/Pictures/Saved%20Pictures/amir1.png" alt="عکس فن">
+   </button>
+<button type="button" onclick="alert(' کولر روشن شد ')"> 
+<img src="file:///C:/Users/ASUS/Pictures/Saved%20Pictures/amir2.png" alt="عکس فن">
+   </button> 
+</button>
+<button type="button" onclick="alert(' ماشین لباس شویی روشن شد ')"> 
+<img src="file:///C:/Users/ASUS/Pictures/Saved%20Pictures/amir3.png" alt="عکس فن">
+   </button>
+</button>
+<button type="button" onclick="alert(' فن روشن شد ')"> 
+<img src="file:///C:/Users/ASUS/Pictures/Saved%20Pictures/amir4.png" alt="عکس فن">
+   </button>
+<hr>
+
+   <div class="gauge-wrapper">
+    <div>
+        <svg class="gauge-container" viewBox="0 0 100 50">
+            <!-- پس زمینه گیج -->
+            <path d="M10,50 A40,40 0 0,1 90,50" fill="none" stroke="#ccc" stroke-width="5"/>
+            <path d="M10,50 A40,40 0 0,1 90,50" fill="none" stroke="orange" stroke-width="5" stroke-dasharray="360" stroke-dashoffset="0"/>
+            <path d="M10,50 A40,40 0 0,1 90,50" fill="none" stroke="red" stroke-width="5" stroke-dasharray="100" stroke-dashoffset="100"/>
+            <path d="M10,50 A40,40 0 0,1 90,50" fill="none" stroke="green" stroke-width="5" stroke-dasharray="63 " stroke-dashoffset="0"/>
+            <!-- عقربه -->
+            <line class="needle" x1="50" y1="50" x2="50" y2="15" stroke="black" stroke-width="2"/>
+            <!-- دایره مرکز -->
+            <circle cx="50" cy="47" r="3" fill="black"/>
+        </svg>
+        <p>°Cدمای فعلی: <span id="tempValue1">50</span></p>
+    </div>
+
+    <div>
+        <svg class="gauge-container" viewBox="0 0 100 50">
+            <!-- پس زمینه گیج -->
+            <path d="M10,50 A40,40 0 0,1 90,50" fill="none" stroke="#ccc" stroke-width="5"/>
+            <path d="M10,50 A40,40 0 0,1 90,50" fill="none" stroke="orange" stroke-width="5" stroke-dasharray="360" stroke-dashoffset="0"/>
+            <path d="M10,50 A40,40 0 0,1 90,50" fill="none" stroke="red" stroke-width="5" stroke-dasharray="100" stroke-dashoffset="100"/>
+            <path d="M10,50 A40,40 0 0,1 90,50" fill="none" stroke="green" stroke-width="5" stroke-dasharray="63 " stroke-dashoffset="0"/>
+            <!-- عقربه -->
+            <line class="needle" x1="50" y1="50" x2="50" y2="15" stroke="black" stroke-width="2"/>
+            <!-- دایره مرکز -->
+            <circle cx="50" cy="47" r="3" fill="black"/>
+        </svg>
+        <p>رطوبت فعلی: <span id="tempValue2">50</span></p>
+    </div>
+</div>
+
+</center> 
+ 
+<script>
+document.addEventListener("keydown", function(event) {
+    if (event.ctrlKey && (event.key === "u" || event.key === "U")) {
+        event.preventDefault();
+        alert("مشاهده سورس کد غیرفعال است!");
+    }
+});
+
+document.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+    alert("کلیک راست غیرفعال است!");
+});
+</script> 
+</body>
+</html><!-- تولید شده توسط امیر حسین حسینی -->
